@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  h1 Palindrome Checker
+  form(method="POST" action="/")
+    label(for="userText") Enter your action here:
+    br
+    input(type="text" id="userText" name="userText" value=`${phrase}`)
+    br
+    br
+    button(type="submit") Submit
+    if message
+      p=message
+  br
+  p A palindrome is a word or phrase (though any string of text will work on this website) that
+  p is the same forward and backward, excluding capitalizations, spaces, and puncuation.
+  p This will search for common puncuation.
+  p However, spaces and each form of puncuation will only be accounted for once, so make sure
+  p to not use too many spaces or puncuation marks.
+  br
+  h4 Here are a few examples of palindromes:
+  br
+  p Taco Cat
+  br
+  p Rats live on no evil star
+  br
+  p Racecar
+  br
+  h4 Here are a couple of examples of things that aren't palindromes:
+  br
+  p Happy
+  br
+  p The quick brown fox jumps over the lazy dog.
+  br
+  h4 Here is a palindrome our website won't accept:
+  br
+  p T. Eliot, top bard, notes putrid tang emanating is sad. I'd assign it a name:
+  p gnat dirt upset on drab pot toilet.
+
